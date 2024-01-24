@@ -1,0 +1,45 @@
+{% extends 'registration/base.html' %}
+
+{% block content %}
+<!-- {{content}} -->
+<div class="container">
+    <h1 class="text-center text-primary">Registration List</h1>
+    <div class="col">
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Email Id</th>
+               <th>Address</th>
+               <th>Phone Number</th>
+               <th>Position</th>
+               <th class="text-center">Action</th>
+               <!-- Add more columns as needed -->
+            </tr>
+         </thead>
+         <tbody>
+            {% for content in content.registration_list %}
+               <tr>
+                  <td>{{ content.name }}</td>
+                  <td>{{ content.email }}</td>
+                  <td>{{ content.number }}</td>
+                  <td>{{ content.address }}</td>
+                  <td>{{ content.position }}</td>
+                  <td>
+                     <div class="col-12">
+                        <button class="mx-1 btn btn-primary btn-sm"
+                        data-target="{{ content.id }}">Edit</button>
+                        <button class="btn btn-danger btn-sm mx-1">Delete</button>
+                     </div>
+                     
+                  </td>
+                  <!-- Add more cells for additional fields -->
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+    </div>
+   
+</div>
+{% endblock %}
