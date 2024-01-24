@@ -7,6 +7,7 @@ router.register('emp_list',EmpDetailsList,'Emp_list')
 # router.register('updateEmp_list/<int:pk>',views.EmpDetailstUpdate,'updateEmp_list')
 router.register('position_list',PositionList,'position_list')
 router.register('comment_list',CommentList,'comment_list')
+router.register('shoping_list',ShopingCheckoutList,'shoping_list')
 
 urlpatterns = [
     path('', registration_create),

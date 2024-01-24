@@ -73,6 +73,8 @@ class CommentList(viewsets.ModelViewSet):
 
 
 
-# class ShopingCheckoutList(viewsets.ModelViewSet):
+class ShopingCheckoutList(viewsets.ModelViewSet):
+    serializer_class=ShopingSerializer
+    queryset=ShoopingCheckOut.objects.all()
 
 

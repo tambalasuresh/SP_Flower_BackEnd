@@ -18,6 +18,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 class ShopingAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'email','conutry']
+    list_filter=['district']
 
 admin.site.register(EmpRegistration, EmpRegistrationAdmin)
 admin.site.register(Position, PositionAdmin)
